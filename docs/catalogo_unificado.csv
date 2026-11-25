@@ -1,0 +1,66 @@
+﻿id,proveedor,nombre,categoria,precio_eur,iva_incluido,medidas,color,material,estado,stock,actualizado
+A-1116,Proveedor A,SOFÁ NÓRDICO 3 PLAZAS,SOFAS Y SILLONES,,True,210x90x85 cm,GRIS,LINO,ACTIVO,,2026-07-04 00:00:00
+A-1369,Proveedor A,CAMA SOL 150X190 CON CANAPÉ,DORMITORIO / CAMAS,520.0,True,160x200x40 cm,blanco,MELAMINA,ACTIVO,,2026-11-11 00:00:00
+A-1893,Proveedor A,Sillón Viena 1 PLAZA,SOFAS Y SILLONES,279.0,True,80x82x90 cm,BEIGE,Lino,ACTIVO,,2026-11-13 00:00:00
+A-1971,Proveedor A,Sillón de dirección Ejecutivo,DESPACHO - SILLAS,319.0,True,"0,68 x 0,70 x 1,20 m",MARRON,Piel,ACTIVO,,2026-11-11 00:00:00
+A-2229,Proveedor A,ESCRITORIO ELEVABLE ELÉCTRICO 160 CM,DESPACHO,354.55,False,"1,60 x 0,80 x 1,20 m",Negro,METAL,ACTIVO,,2026-11-12 00:00:00
+A-2368,Proveedor A,Escritorio Trabajo 140 cm,DESPACHO,160.0,True,140x60x75 cm,blanco,MELAMINA,ACTIVO,,2026-11-10 00:00:00
+A-2431,Proveedor A,Sofá Lund tres plazas,SOFAS Y SILLONES,890.0,False,"2,05 x 0,92 x 0,84 m",Azul,Tela,ACTIVO,,2026-11-14 00:00:00
+A-2964,Proveedor A,Mesa de comedor Duero redonda,COMEDOR - MESAS,399.0,True,110x110x75 cm,Nogal,Madera,ACTIVO,,2026-05-19 00:00:00
+A-3028,Proveedor A,Silla de oficina Basic,DESPACHO - SILLAS,69.0,True,58x56x95 cm,NEGRO,Tela,ACTIVO,,2026-11-13 00:00:00
+A-3115,Proveedor A,Pack 2 almohadas viscoelásticas,TEXTIL HOGAR,45.0,True,70x40x12 cm,Blanco,Espuma,ACTIVO,,2026-11-16 00:00:00
+A-3551,Proveedor A,APARADOR 3 PUERTAS,ALMACENAJE,310.0,True,"1,60 x 0,40 x 0,80 m",Nogal,MADERA,ACTIVO,,2026-11-14 00:00:00
+A-4280,Proveedor A,Pack 2 sillas Industrial,COMEDOR - SILLAS,81.82,False,"0,42 x 0,48 x 0,80 m",Negro,Metal,ACTIVO,,2026-11-13 00:00:00
+A-4350,Proveedor A,CAJONERA CON RUEDAS 3 CAJONES,ALMACENAJE,65.29,False,"0,40 x 0,50 x 0,60 m",blanco,METAL,ACTIVO,,2026-11-11 00:00:00
+A-4533,Proveedor A,Alfombra de salón 160x230,TEXTIL HOGAR,89.0,True,160x230x1 cm,Beige,LANA,ACTIVO,,2026-11-11 00:00:00
+A-4669,Proveedor A,MESA DE COCINA SIL PLEGABLE,COMEDOR - MESAS,123.14,False,"0,80 x 0,60 x 0,75 m",blanco,METAL,ACTIVO,,2026-08-12 00:00:00
+A-4961,Proveedor A,Cama Luna 150x190,DORMITORIO / CAMAS,449.0,True,160x200x100 cm,Roble,MADERA,ACTIVO,,2026-07-14 00:00:00
+A-5051,Proveedor A,FUNDA NÓRDICA 150 TODO EL AÑO,TEXTIL HOGAR,69.0,True,"2,40 x 2,20 x 0,03 m",BLANCO,Algodón,ACTIVO,,2026-11-16 00:00:00
+A-5053,Proveedor A,Pack 4 cojines decorativos,TEXTIL HOGAR,32.23,False,"0,45 x 0,45 x 0,15 m",Verde,Terciopelo,ACTIVO,,2026-08-21 00:00:00
+A-5441,Proveedor A,Lámpara de mesilla Cerámica,ILUMINACIÓN,23.97,False,20x20x35 cm,Blanco,CERAMICA,ACTIVO,,2026-11-12 00:00:00
+A-5784,Proveedor A,Escritorio compacto 100 cm,DESPACHO,81.82,False,"1,00 x 0,50 x 0,75 m",Roble,MELAMINA,ACTIVO,,2026-11-17 00:00:00
+A-5805,Proveedor A,MESA DE COMEDOR TAJO,COMEDOR - MESAS,290.0,True,"1,40 x 0,80 x 0,75 m",BLANCO,MELAMINA,ACTIVO,,2026-11-11 00:00:00
+A-6232,Proveedor A,Sofá Malmö con chaise longue 4 PLAZAS,SOFAS Y SILLONES,1569.0,True,280x160x86 cm,GRIS,TELA,ACTIVO,,2026-07-11 00:00:00
+A-6662,Proveedor A,ARMARIO 2 PUERTAS CORREDERAS,ALMACENAJE,340.0,True,"1,50 x 0,60 x 2,00 m",BLANCO,MELAMINA,ACTIVO,,2026-11-10 00:00:00
+A-6692,Proveedor A,Pack 4 sillas de comedor Arena,COMEDOR - SILLAS,180.99,False,"0,45 x 0,52 x 0,82 m",Beige,Tela,ACTIVO,,2026-05-20 00:00:00
+A-6902,Proveedor A,SOFÁ AARHUS 3 PLAZAS,SOFAS Y SILLONES,1590.0,True,"2,15 x 0,95 x 0,85 m",Marrón,PIEL,ACTIVO,,2026-11-13 00:00:00
+A-7254,Proveedor A,Colchón Descanso 150x190,DESCANSO,299.0,True,"1,50 x 1,90 x 0,25 m",BLANCO,Espuma,ACTIVO,,2026-11-13 00:00:00
+A-8465,Proveedor A,CAMA ROCA 135X190,DORMITORIO / CAMAS,304.96,False,"1,45 x 2,00 x 0,95 m",NOGAL,Madera,ACTIVO,,2026-04-02 00:00:00
+A-9000,Proveedor A,Manta para sofá,TEXTIL HOGAR,23.97,False,130x170x1 cm,Gris,Algodón,ACTIVO,,2026-11-16 00:00:00
+A-9287,Proveedor A,Colchón Confort 150x200,DESCANSO,389.0,True,150x200x27 cm,blanco,ESPUMA,ACTIVO,,2026-11-14 00:00:00
+A-9295,Proveedor A,Lámpara de techo Trenzada,ILUMINACIÓN,59.0,True,"0,50 x 0,50 x 0,30 m",Natural,Lino,ACTIVO,,2026-11-15 00:00:00
+A-9750,Proveedor A,Pack 6 sillas de comedor Nogal,COMEDOR - SILLAS,459.0,True,45x50x82 cm,Nogal,Madera,ACTIVO,,2026-06-04 00:00:00
+A-9913,Proveedor A,Colchón Basic 90x190,DESCANSO,149.0,True,90x190x20 cm,BLANCO,ESPUMA,ACTIVO,,2026-11-11 00:00:00
+B-13338,Nordhem Furniture Supply,Lámpara de pie Arco,lighting,89.0,True,40.0 x 40.0 x 180.0 cm,black,metal,active,21,2026-11-15 09:00:00
+B-21741,Nordhem Furniture Supply,Pack 4 cojines decorativos,textile,39.0,True,,green,velvet,active,24,2026-11-18 09:00:00
+B-22183,Nordhem Furniture Supply,Colchón Firme 135x190,mattress,259.0,True,,white,pocket springs,active,18,2026-11-16 09:00:00
+B-22857,Nordhem Furniture Supply,Juego de sábanas 150,textile,35.0,True,2400.0 x 2700.0 x 10.0 mm,white,cotton,active,22,2026-11-15 09:00:00
+B-23736,Nordhem Furniture Supply,Mesilla de noche 1 cajón,storage,55.0,True,,oak,wood,active,39,2026-11-10 09:00:00
+B-28073,Nordhem Furniture Supply,Pack 4 sillas de comedor Roble,dining_chair,240.0,True,44.0 x 50.0 x 80.0 cm,oak,wood,active,7,2026-11-14 09:00:00
+B-30739,Nordhem Furniture Supply,Lámpara de mesilla Cerámica,lighting,39.0,True,,white,ceramic,active,11,2026-04-07 09:00:00
+B-32440,Nordhem Furniture Supply,Cama Nube 90x190,bed,210.0,True,100.0 x 200.0 x 90.0 cm,white,wood,active,10,2026-11-18 09:00:00
+B-36536,Nordhem Furniture Supply,Sofá Malmö con chaise longue,sofa,1349.0,True,,grey,fabric,active,26,2026-11-11 09:00:00
+B-36878,Nordhem Furniture Supply,Cama Brisa 150x200 tapizada,bed,610.0,True,,grey,fabric,active,32,2026-11-17 09:00:00
+B-39342,Nordhem Furniture Supply,Protector de colchón impermeable 150,textile,25.0,True,150.0 x 190.0 x 1.0 cm,white,cotton,active,26,2026-11-13 09:00:00
+B-40144,Nordhem Furniture Supply,Estantería librería 5 baldas,storage,95.0,True,800.0 x 300.0 x 1800.0 mm,oak,wood,active,20,2026-11-12 09:00:00
+B-49554,Nordhem Furniture Supply,Pack 4 sillas de comedor Arena,dining_chair,148.76,False,45.0 x 52.0 x 82.0 cm,beige,fabric,active,34,2026-11-11 09:00:00
+B-50794,Nordhem Furniture Supply,Reposapiés ergonómico,accessory,20.66,False,450.0 x 350.0 x 120.0 mm,black,metal,active,33,2026-11-17 09:00:00
+B-52063,Nordhem Furniture Supply,Mesa de comedor Duero redonda,dining_table,360.0,True,1100.0 x 1100.0 x 750.0 mm,walnut,wood,active,33,2026-11-10 09:00:00
+B-52757,Nordhem Furniture Supply,Sofá Bergen,sofa,1190.0,True,220.0 x 95.0 x 88.0 cm,green,velvet,active,15,2026-11-11 09:00:00
+B-57515,Nordhem Furniture Supply,Sofá cama Turku,sofa,499.0,True,1500.0 x 850.0 x 800.0 mm,grey,fabric,active,17,2026-11-14 09:00:00
+B-57833,Nordhem Furniture Supply,Cama Luna 150x190,bed,314.05,False,1600.0 x 2000.0 x 1000.0 mm,oak,wood,active,8,2026-11-17 09:00:00
+B-60749,Nordhem Furniture Supply,Silla de oficina ergonómica de malla,office_chair,129.0,True,62.0 x 60.0 x 110.0 cm,black,mesh,active,31,2026-11-15 09:00:00
+B-65328,Nordhem Furniture Supply,Silla de oficina Pro con reposacabezas,office_chair,249.0,True,660.0 x 640.0 x 1250.0 mm,grey,mesh,active,38,2026-11-11 09:00:00
+B-65337,Nordhem Furniture Supply,Sofá Nórdico,sofa,849.0,True,,grey,linen,active,28,2026-11-12 09:00:00
+B-67452,Nordhem Furniture Supply,Soporte de monitor de madera,accessory,39.0,True,600.0 x 220.0 x 100.0 mm,oak,wood,active,21,2026-11-13 09:00:00
+B-70916,Nordhem Furniture Supply,Alfombrilla protectora para silla,accessory,29.0,True,1200.0 x 900.0 x 10.0 mm,natural,melamine,active,21,2026-11-17 09:00:00
+B-78559,Nordhem Furniture Supply,Sofá Alba,sofa,599.0,True,160.0 x 88.0 x 82.0 cm,beige,fabric,active,17,2026-11-10 09:00:00
+B-82382,Nordhem Furniture Supply,Cama Roca 135x190,bed,340.0,True,1450.0 x 2000.0 x 950.0 mm,walnut,wood,active,16,2026-11-15 09:00:00
+B-84380,Nordhem Furniture Supply,Silla de oficina Basic,office_chair,79.0,True,58.0 x 56.0 x 95.0 cm,black,fabric,active,9,2026-04-13 09:00:00
+B-84789,Nordhem Furniture Supply,Mesa de cocina Sil plegable,dining_table,129.0,True,80.0 x 60.0 x 75.0 cm,white,metal,active,4,2026-11-16 09:00:00
+B-84838,Nordhem Furniture Supply,Escritorio de esquina 150 cm,desk,219.0,True,150.0 x 120.0 x 75.0 cm,walnut,wood,active,33,2026-11-11 09:00:00
+B-85581,Nordhem Furniture Supply,Flexo LED regulable,lighting,28.93,False,15.0 x 15.0 x 45.0 cm,white,metal,active,6,2026-11-12 09:00:00
+B-90466,Nordhem Furniture Supply,Pack 6 sillas de comedor Nogal,dining_chair,390.0,True,,walnut,wood,active,16,2026-11-14 09:00:00
+B-93141,Nordhem Furniture Supply,Sofá Aarhus,sofa,1719.0,True,215.0 x 95.0 x 85.0 cm,brown,leather,active,34,2026-05-08 09:00:00
+B-94536,Nordhem Furniture Supply,Escritorio elevable eléctrico 160 cm,desk,519.0,True,,black,metal,active,10,2026-08-23 09:00:00
+B-98516,Nordhem Furniture Supply,Colchón Premium 150x190 de muelles ensacados,mattress,549.0,True,1500.0 x 1900.0 x 300.0 mm,white,pocket springs,active,29,2026-11-16 09:00:00
