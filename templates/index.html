@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Catálogo | Muebles Cloud{% endblock %}
+
+{% block content %}
+<section aria-labelledby="catalog-heading">
+  <h1 id="catalog-heading">Catálogo de muebles</h1>
+
+  <div class="toolbar">
+    <nav class="pills" aria-label="Filtrar por categoría">
+      <a class="pill {% if not categoria_activa %}active{% endif %}" href="/">Todos</a>
+      {% for cat in categorias %}
+        <a class="pill {% if categoria_activa == cat %}active{% endif %}" href="/?categoria={{ cat }}">{{ cat|capitalize }}</a>
+      {% endfor %}
+    </nav>
+
+    <form class="search-form" method="get" action="/">
+      {% if categoria_activa %}
+        <input type="hidden" name="categoria" value="{{ categoria_activa }}" />
+      {% endif %}
+      <label for="q" class="meta">Buscar:</label>
+      <input id="q" name="q" type="search" value="{{ query }}" placeholder="sofá, lino, gris..." maxlength="60" />
+      <button class="btn btn-secondary" type="submit">Filtrar</button>
+    </form>
+  </div>
+
+  {% if productos %}
+    <div class="grid">
+      {% for p in productos %}
+        <article class="card">
+          <a href="/producto/{{ p.sku }}">
+            <img src="/static/placeholder.svg" alt="{{ p.nombre }}" width="400" height="260" />
+          </a>
+          <div class="card-body">
+            <h2 class="card-title"><a href="/producto/{{ p.sku }}">{{ p.nombre }}</a></h2>
+            <p class="meta">{{ p.categoria|capitalize }} &middot; {{ p.material }} &middot; {{ p.color }}</p>
+            <p class="price">{{ "%.2f"|format(p.precio) }} &euro;</p>
+            <div class="card-actions">
+              <a class="btn btn-secondary" href="/producto/{{ p.sku }}">Ver ficha</a>
+              <form method="post" action="/carrito/agregar">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+                <input type="hidden" name="sku" value="{{ p.sku }}" />
+                <button class="btn" type="submit">Añadir</button>
+              </form>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="panel">
+      <p>No se encontraron muebles con los filtros seleccionados.</p>
+      <a class="btn btn-secondary" href="/">Ver todo el catálogo</a>
+    </div>
+  {% endif %}
+</section>
+{% endblock %}

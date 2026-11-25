@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ producto.nombre }} | Muebles Cloud{% endblock %}
+
+{% block content %}
+<nav aria-label="Ruta de navegación" class="meta">
+  <a href="/">Catálogo</a> &rsaquo; <a href="/?categoria={{ producto.categoria }}">{{ producto.categoria|capitalize }}</a> &rsaquo; {{ producto.nombre }}
+</nav>
+
+<article class="panel detail-layout">
+  <img src="/static/placeholder.svg" alt="{{ producto.nombre }}" width="400" height="260" />
+  <div>
+    <h1>{{ producto.nombre }}</h1>
+    <p class="price">{{ "%.2f"|format(producto.precio) }} &euro;</p>
+
+    <ul class="specs">
+      <li><span>SKU</span><strong>{{ producto.sku }}</strong></li>
+      <li><span>Categoría</span><strong>{{ producto.categoria }}</strong></li>
+      <li><span>Material</span><strong>{{ producto.material }}</strong></li>
+      <li><span>Color</span><strong>{{ producto.color }}</strong></li>
+      <li><span>Ancho</span><strong>{{ producto.ancho_cm }} cm</strong></li>
+      {% if producto.plazas and producto.plazas > 0 %}
+        <li><span>Plazas</span><strong>{{ producto.plazas }}</strong></li>
+      {% endif %}
+      <li><span>Referencias origen</span><strong>{{ producto.ids_origen|join(", ") }}</strong></li>
+    </ul>
+
+    <form method="post" action="/carrito/agregar" class="card-actions">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+      <input type="hidden" name="sku" value="{{ producto.sku }}" />
+      <button class="btn" type="submit">Añadir al carrito</button>
+      <a class="btn btn-secondary" href="/">Volver al catálogo</a>
+    </form>
+  </div>
+</article>
+{% endblock %}

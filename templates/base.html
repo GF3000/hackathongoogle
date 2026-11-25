@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Muebles Cloud{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Muebles Cloud</a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="/">Catálogo</a>
+        <a href="/asistente">Asistente IA</a>
+        <a href="/carrito">Carrito ({{ cart_count }})</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Muebles Cloud &middot; Tienda SSR sin JavaScript en cliente &middot; Cloud Run
+    </div>
+  </footer>
+</body>
+</html>

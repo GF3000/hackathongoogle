@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Ilustracion de mueble">
+  <rect width="400" height="260" fill="#efece6" />
+  <rect x="65" y="110" width="270" height="65" rx="14" fill="#a8a29e" />
+  <rect x="55" y="130" width="32" height="58" rx="8" fill="#78716c" />
+  <rect x="313" y="130" width="32" height="58" rx="8" fill="#78716c" />
+  <rect x="85" y="82" width="230" height="44" rx="12" fill="#d6d3d1" />
+  <rect x="82" y="175" width="12" height="26" rx="3" fill="#57534e" />
+  <rect x="306" y="175" width="12" height="26" rx="3" fill="#57534e" />
+</svg>

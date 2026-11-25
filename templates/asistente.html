@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Asistente de Decoración | Muebles Cloud{% endblock %}
+
+{% block content %}
+<section class="panel" aria-labelledby="assistant-heading">
+  <h1 id="assistant-heading">Asistente de decoración</h1>
+  <p class="meta">Describe tu espacio o presupuesto y te recomendamos piezas de nuestro catálogo.</p>
+
+  <form method="post" action="/asistente" class="stack">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+    <label for="pregunta">¿Qué necesitas para tu hogar?</label>
+    <textarea id="pregunta" name="pregunta" rows="3" required minlength="3" maxlength="300" placeholder="Busco un sofá cómodo de tonos neutros y una lámpara para salón...">{{ pregunta }}</textarea>
+    <div>
+      <button class="btn" type="submit">Consultar recomendación</button>
+    </div>
+  </form>
+
+  {% if respuesta %}
+    <article class="alert-ok" aria-live="polite">
+      <h2>Recomendación ({{ origen_respuesta }})</h2>
+      <p>{{ respuesta }}</p>
+    </article>
+  {% endif %}
+
+  {% if error %}
+    <div class="alert-err" role="alert">{{ error }}</div>
+  {% endif %}
+</section>
+{% endblock %}

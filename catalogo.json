@@ -1,0 +1,48 @@
+{
+  "productos": [
+    {
+      "sku": "sofa-nordico",
+      "ids_origen": ["A-1116", "B-65337"],
+      "nombre": "Sofá Nórdico",
+      "categoria": "sofa",
+      "precio": 849.00,
+      "plazas": 3,
+      "ancho_cm": 210,
+      "color": "gris",
+      "material": "lino"
+    },
+    {
+      "sku": "lampara-arco-laton",
+      "ids_origen": ["A-2041", "C-88120"],
+      "nombre": "Lámpara de Pie Arco",
+      "categoria": "iluminacion",
+      "precio": 189.00,
+      "plazas": 0,
+      "ancho_cm": 45,
+      "color": "laton",
+      "material": "acero y marmol"
+    },
+    {
+      "sku": "alfombra-yute-natural",
+      "ids_origen": ["B-33091", "D-1045"],
+      "nombre": "Alfombra Trenzada Yute",
+      "categoria": "textil",
+      "precio": 129.00,
+      "plazas": 0,
+      "ancho_cm": 200,
+      "color": "beige",
+      "material": "yute organico"
+    },
+    {
+      "sku": "espejo-roble-redondo",
+      "ids_origen": ["A-5502", "B-91204"],
+      "nombre": "Espejo Circular Roble",
+      "categoria": "accesorio",
+      "precio": 95.00,
+      "plazas": 0,
+      "ancho_cm": 80,
+      "color": "roble natural",
+      "material": "madera maciza y cristal"
+    }
+  ]
+}

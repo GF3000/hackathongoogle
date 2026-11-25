@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Carrito | Muebles Cloud{% endblock %}
+
+{% block content %}
+<section aria-labelledby="cart-heading">
+  <h1 id="cart-heading">Tu carrito</h1>
+
+  {% if pedido_confirmado %}
+    <div class="alert-ok" role="status">
+      <strong>Pedido {{ pedido_confirmado.id }} confirmado.</strong>
+      Total: {{ "%.2f"|format(pedido_confirmado.total) }} &euro; &middot; Envío a {{ pedido_confirmado.ciudad }}.
+    </div>
+  {% endif %}
+
+  {% if error %}
+    <div class="alert-err" role="alert">{{ error }}</div>
+  {% endif %}
+
+  {% if items %}
+    <div class="panel">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio unitario</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+            <tr>
+              <td><a href="/producto/{{ item.producto.sku }}">{{ item.producto.nombre }}</a></td>
+              <td>{{ "%.2f"|format(item.producto.precio) }} &euro;</td>
+              <td>{{ item.cantidad }}</td>
+              <td>{{ "%.2f"|format(item.subtotal) }} &euro;</td>
+              <td>
+                <form method="post" action="/carrito/eliminar">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+                  <input type="hidden" name="sku" value="{{ item.producto.sku }}" />
+                  <button class="btn btn-secondary" type="submit">Quitar</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <p class="price">Total: {{ "%.2f"|format(total) }} &euro;</p>
+
+      <form method="post" action="/carrito/vaciar">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+        <button class="btn btn-danger" type="submit">Vaciar carrito</button>
+      </form>
+    </div>
+
+    <section class="panel" aria-labelledby="checkout-heading">
+      <h2 id="checkout-heading">Finalizar pedido</h2>
+      <form method="post" action="/checkout" class="stack">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" required minlength="2" maxlength="80" placeholder="Ana García" />
+
+        <label for="ciudad">Ciudad de envío</label>
+        <input id="ciudad" name="ciudad" type="text" required minlength="2" maxlength="80" placeholder="Madrid" />
+
+        <button class="btn" type="submit">Confirmar pedido</button>
+      </form>
+    </section>
+  {% else %}
+    <div class="panel">
+      <p>Tu carrito está vacío.</p>
+      <a class="btn" href="/">Explorar muebles</a>
+    </div>
+  {% endif %}
+</section>
+{% endblock %}
