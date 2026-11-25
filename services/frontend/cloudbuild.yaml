@@ -1,0 +1,52 @@
+# Pipeline independiente para Persona 1 (Frontend)
+# En el trigger de Cloud Build configurar includedFiles: ["services/frontend/**", "contracts/**"]
+substitutions:
+  _REGION: europe-west1
+  _REPO: muebles-repo
+  _SERVICE_NAME: muebles-frontend
+  _PR_NUMBER: ''
+
+steps:
+  - name: 'node:22-alpine'
+    id: 'unit-tests'
+    dir: 'services/frontend'
+    entrypoint: 'npm'
+    args: ['test']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'build-image'
+    args:
+      - 'build'
+      - '-t'
+      - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/${_SERVICE_NAME}:${SHORT_SHA}'
+      - 'services/frontend'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'push-image'
+    args:
+      - 'push'
+      - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/${_SERVICE_NAME}:${SHORT_SHA}'
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+    id: 'deploy-cloud-run'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        set -euo pipefail
+        if [ -n "${_PR_NUMBER}" ]; then
+          gcloud run deploy "${_SERVICE_NAME}" \
+            --image="${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/${_SERVICE_NAME}:${SHORT_SHA}" \
+            --region="${_REGION}" \
+            --no-traffic \
+            --tag="pr-${_PR_NUMBER}" \
+            --quiet
+        else
+          gcloud run deploy "${_SERVICE_NAME}" \
+            --image="${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/${_SERVICE_NAME}:${SHORT_SHA}" \
+            --region="${_REGION}" \
+            --quiet
+        fi
+
+options:
+  logging: CLOUD_LOGGING_ONLY

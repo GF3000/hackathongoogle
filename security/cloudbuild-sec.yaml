@@ -1,0 +1,10 @@
+# Pipeline independiente para Persona 4 (Seguridad & Ciberseguridad)
+# En el trigger de Cloud Build configurar includedFiles: ["security/**", "infra/**", "services/**/Dockerfile"]
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+    id: 'static-security-audit'
+    entrypoint: 'bash'
+    args: ['security/run-security-checks.sh']
+
+options:
+  logging: CLOUD_LOGGING_ONLY

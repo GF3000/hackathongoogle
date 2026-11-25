@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muebles Cloud - Tienda Online</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; color: #1f2937; }
+    header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; }
+    .filters { margin: 1rem 0; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .card { border: 1px solid #d1d5db; border-radius: 8px; padding: 1rem; }
+    button { background: #1d4ed8; color: #fff; border: none; border-radius: 6px; padding: 0.5rem 0.75rem; cursor: pointer; }
+    button.secondary { background: #374151; }
+    #checkout { margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muebles Cloud</h1>
+    <div>Carrito: <strong id="cart-count">0</strong> uds.</div>
+  </header>
+
+  <div class="filters">
+    <button class="secondary" data-category="">Todos</button>
+    <button class="secondary" data-category="sofas">Sofas</button>
+    <button class="secondary" data-category="mesas">Mesas</button>
+    <button class="secondary" data-category="sillas">Sillas</button>
+    <button class="secondary" data-category="estanterias">Estanterias</button>
+  </div>
+
+  <main class="grid" id="catalog"></main>
+
+  <section id="checkout">
+    <h2>Finalizar pedido</h2>
+    <label>Ciudad de envio: <input id="city" type="text" value="Madrid" maxlength="80" /></label>
+    <button id="buy-btn">Confirmar pedido (token seguro)</button>
+    <p id="status"></p>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>

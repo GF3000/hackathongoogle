@@ -1,0 +1,4 @@
+project_id     = "muebles-hack-dev"
+region         = "europe-west1"
+frontend_image = "europe-west1-docker.pkg.dev/muebles-hack-dev/muebles-repo/muebles-frontend:latest"
+backend_image  = "europe-west1-docker.pkg.dev/muebles-hack-dev/muebles-repo/muebles-backend:latest"

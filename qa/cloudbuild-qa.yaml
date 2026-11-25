@@ -1,0 +1,17 @@
+# Pipeline independiente para Persona 5 (QA / E2E)
+# En el trigger de Cloud Build configurar includedFiles: ["qa/**", "contracts/**"]
+steps:
+  - name: 'node:22-alpine'
+    id: 'frontend-tests'
+    dir: 'services/frontend'
+    entrypoint: 'npm'
+    args: ['test']
+
+  - name: 'python:3.12-slim'
+    id: 'backend-tests'
+    dir: 'services/backend'
+    entrypoint: 'python3'
+    args: ['-m', 'unittest', 'discover', '-s', '.', '-p', 'test_*.py']
+
+options:
+  logging: CLOUD_LOGGING_ONLY

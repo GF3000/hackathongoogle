@@ -1,0 +1,64 @@
+openapi: 3.0.3
+info:
+  title: Tienda Online de Muebles API
+  version: 1.0.0
+  description: Contrato compartido para desarrollo paralelo entre Frontend, Backend y QA.
+servers:
+  - url: http://localhost:8081
+    description: Desarrollo local
+paths:
+  /healthz:
+    get:
+      summary: Comprobación de estado del servicio
+      responses:
+        '200':
+          description: Servicio operativo
+  /api/v1/furniture:
+    get:
+      summary: Listar catálogo de muebles
+      parameters:
+        - in: query
+          name: category
+          schema:
+            type: string
+            enum: [sofas, mesas, sillas, estanterias]
+      responses:
+        '200':
+          description: Lista de muebles disponibles
+  /api/v1/orders:
+    post:
+      summary: Crear pedido (checkout con pago tokenizado, sin PAN)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [items, payment_token, shipping_city]
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required: [furniture_id, quantity]
+                    properties:
+                      furniture_id:
+                        type: string
+                      quantity:
+                        type: integer
+                        minimum: 1
+                        maximum: 20
+                payment_token:
+                  type: string
+                  description: Token generado por pasarela externa (nunca datos de tarjeta)
+                shipping_city:
+                  type: string
+                  minLength: 2
+                  maxLength: 80
+      responses:
+        '201':
+          description: Pedido creado correctamente
+        '400':
+          description: Datos inválidos
+        '409':
+          description: Stock insuficiente
